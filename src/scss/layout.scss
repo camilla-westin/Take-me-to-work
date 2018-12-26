@@ -1,0 +1,20 @@
+body {
+    background: #000;
+    background-image: url('../img/bg-image.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 400px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+h1 {
+    font-size: 120px;
+    padding-left: 40px;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
