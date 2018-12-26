@@ -228,7 +228,7 @@ eval("module.exports = __webpack_require__.p + \"./img/bg-image.jpg\";\n\n//# so
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n$.ajax({\n    type: \"GET\",\n    url: \"http://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=9192&timewindow=10\",\n    async: false,\n    contentType: \"application/json\",\n    dataType: \"jsonp\",\n    jsonp: 'callback',\n    jsonpCallback: 'jsonp_callback',\n    success: function (feed) {\n        console.log(feed);\n    },\n    error: function (e) {\n        console.log(\"Nope not working..\");\n    }\n});\n\n//# sourceURL=webpack:///./src/js/nextDeparture.js?");
+eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n$(document).ready(function () {\n    $.ajax({\n        type: \"GET\",\n        url: \"https://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=9192&timewindow=5\",\n        dataType: 'json',\n        success: function (feed) {\n            console.log(feed);\n        },\n        error: function (e) {\n            console.log(\"Nope not working..\");\n        }\n    });\n});\n\n//# sourceURL=webpack:///./src/js/nextDeparture.js?");
 
 /***/ }),
 

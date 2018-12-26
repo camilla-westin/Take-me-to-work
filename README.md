@@ -1,7 +1,6 @@
-# Skeleton
+# Take me to works
 ## To do
-- typescript
-- SCSS importing
+
 
 ## Setup
 `npm run dev`

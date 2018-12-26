@@ -22,5 +22,8 @@
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "jquery": "^3.3.1"
+  },
+  "dependencies": {
+    "http-server-ssl": "0.0.7"
   }
 }
