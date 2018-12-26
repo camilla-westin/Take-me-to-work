@@ -184,7 +184,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_pure_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/pure.css */ \"./src/css/pure.css\");\n/* harmony import */ var _css_pure_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_pure_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_pure_responsive_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/pure-responsive.css */ \"./src/css/pure-responsive.css\");\n/* harmony import */ var _css_pure_responsive_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_pure_responsive_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _scss_layout_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/layout.scss */ \"./src/scss/layout.scss\");\n/* harmony import */ var _scss_layout_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_layout_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_scripts_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/scripts.js */ \"./src/js/scripts.js\");\n/* harmony import */ var _js_scripts_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_scripts_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _js_nextDeparture_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/nextDeparture.js */ \"./src/js/nextDeparture.js\");\n/* harmony import */ var _js_nextDeparture_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_nextDeparture_js__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_pure_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/pure.css */ \"./src/css/pure.css\");\n/* harmony import */ var _css_pure_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_pure_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_pure_responsive_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/pure-responsive.css */ \"./src/css/pure-responsive.css\");\n/* harmony import */ var _css_pure_responsive_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_pure_responsive_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _scss_layout_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/layout.scss */ \"./src/scss/layout.scss\");\n/* harmony import */ var _scss_layout_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_layout_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_scripts_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/scripts.js */ \"./src/js/scripts.js\");\n/* harmony import */ var _js_scripts_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_scripts_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _js_nextBus_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/nextBus.js */ \"./src/js/nextBus.js\");\n/* harmony import */ var _js_nextBus_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_nextBus_js__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
@@ -221,14 +221,14 @@ eval("module.exports = __webpack_require__.p + \"./img/bg-image.jpg\";\n\n//# so
 
 /***/ }),
 
-/***/ "./src/js/nextDeparture.js":
-/*!*********************************!*\
-  !*** ./src/js/nextDeparture.js ***!
-  \*********************************/
+/***/ "./src/js/nextBus.js":
+/*!***************************!*\
+  !*** ./src/js/nextBus.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n$(document).ready(function () {\n    $.ajax({\n        type: \"GET\",\n        url: \"https://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=9192&timewindow=5\",\n        dataType: 'json',\n        success: function (feed) {\n            console.log(feed);\n        },\n        error: function (e) {\n            console.log(\"Nope not working..\");\n        }\n    });\n});\n\n//# sourceURL=webpack:///./src/js/nextDeparture.js?");
+eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n$(document).ready(function () {\n    $.ajax({\n        type: \"GET\",\n        url: \"https://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=4100&timewindow=5\",\n        dataType: 'json',\n        success: function (feed) {\n            console.log(feed);\n            console.log(feed.ResponseData.Buses);\n        },\n        error: function (e) {\n            console.log(\"Nope not working..\");\n        }\n    });\n});\n\n//# sourceURL=webpack:///./src/js/nextBus.js?");
 
 /***/ }),
 
