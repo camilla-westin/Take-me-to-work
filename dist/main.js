@@ -115,7 +115,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar urlEscape = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */ \"./node_modules/css-loader/dist/runtime/url-escape.js\");\nvar ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ../img/bg-image.jpg */ \"./src/img/bg-image.jpg\"));\n\n// Module\nexports.push([module.i, \"body {\\n  background: #000;\\n  background-image: url(\" + ___CSS_LOADER_URL___0___ + \");\\n  background-repeat: no-repeat;\\n  background-position: top right;\\n  background-size: 400px;\\n  color: #fff;\\n  font-family: Arial, Helvetica, sans-serif; }\\n\\nh1 {\\n  font-size: 120px;\\n  padding-left: 40px; }\\n\\n.photo-credit {\\n  position: absolute;\\n  bottom: 20px;\\n  right: 20px; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/scss/layout.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  color: #000;\\n  font-family: Arial, Helvetica, sans-serif; }\\n\\nh1 {\\n  font-size: 120px;\\n  padding-left: 40px; }\\n\\n#bus-list {\\n  list-style: none;\\n  padding: 0;\\n  margin: 0;\\n  width: 300px; }\\n  #bus-list li {\\n    background: #ccc;\\n    padding: 10px 20px;\\n    border-radius: 3px;\\n    margin-bottom: 10px; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/scss/layout.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -128,18 +128,6 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 
 "use strict";
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return '@media ' + item[2] + '{' + content + '}';\n      } else {\n        return content;\n      }\n    }).join('');\n  }; // import a list of modules into the list\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (i = 0; i < modules.length; i++) {\n      var item = modules[i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || '';\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n  return '/*# ' + data + ' */';\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/url-escape.js":
-/*!************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/url-escape.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nmodule.exports = function escape(url, needQuotes) {\n  if (typeof url !== 'string') {\n    return url;\n  } // If url is already wrapped in quotes, remove them\n\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]/.test(url) || needQuotes) {\n    return '\"' + url.replace(/\"/g, '\\\\\"').replace(/\\n/g, '\\\\n') + '\"';\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/url-escape.js?");
 
 /***/ }),
 
@@ -210,17 +198,6 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dis
 
 /***/ }),
 
-/***/ "./src/img/bg-image.jpg":
-/*!******************************!*\
-  !*** ./src/img/bg-image.jpg ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"./img/bg-image.jpg\";\n\n//# sourceURL=webpack:///./src/img/bg-image.jpg?");
-
-/***/ }),
-
 /***/ "./src/js/nextBus.js":
 /*!***************************!*\
   !*** ./src/js/nextBus.js ***!
@@ -228,7 +205,7 @@ eval("module.exports = __webpack_require__.p + \"./img/bg-image.jpg\";\n\n//# so
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n$(document).ready(function () {\n    $.ajax({\n        type: \"GET\",\n        url: \"https://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=4100&timewindow=5\",\n        dataType: 'json',\n        success: function (feed) {\n            console.log(feed);\n            console.log(feed.ResponseData.Buses);\n        },\n        error: function (e) {\n            console.log(\"Nope not working..\");\n        }\n    });\n});\n\n//# sourceURL=webpack:///./src/js/nextBus.js?");
+eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n$(document).ready(function () {\n    $.ajax({\n        type: \"GET\",\n        url: \"https://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=4124&timewindow=5\",\n        dataType: 'json',\n        success: function (data) {\n            var busDepartures = data.ResponseData.Buses;\n            $.each(busDepartures, function () {\n                $('#bus-list').append('<li>' + this['LineNumber'] + ' ' + this['Destination'] + ' ' + this['DisplayTime'] + '</li>');\n            });\n        },\n        error: function (e) {\n            console.log(\"Nope not working..\");\n        }\n    });\n});\n\n//# sourceURL=webpack:///./src/js/nextBus.js?");
 
 /***/ }),
 

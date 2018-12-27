@@ -1,10 +1,5 @@
 body {
-    background: #000;
-    background-image: url('../img/bg-image.jpg');
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 400px;
-    color: #fff;
+    color: #000;
     font-family: Arial, Helvetica, sans-serif; 
 }
 
@@ -13,8 +8,16 @@ h1 {
     padding-left: 40px;
 }
 
-.photo-credit {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+#bus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+
+    li {
+        background: #ccc;
+        padding: 10px 20px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
 }
