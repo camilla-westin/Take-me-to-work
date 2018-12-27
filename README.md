@@ -4,3 +4,4 @@
 
 ## Setup
 `npm run dev`
+`http-server-ssl -S`
