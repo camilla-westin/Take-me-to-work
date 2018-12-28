@@ -115,7 +115,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  color: #000;\\n  font-family: Arial, Helvetica, sans-serif; }\\n\\nh1 {\\n  font-size: 120px;\\n  padding-left: 40px; }\\n\\n#bus-list {\\n  list-style: none;\\n  padding: 0;\\n  margin: 0;\\n  width: 300px; }\\n  #bus-list li {\\n    background: #ccc;\\n    padding: 10px 20px;\\n    border-radius: 3px;\\n    margin-bottom: 10px; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/scss/layout.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  color: #000;\\n  font-family: Arial, Helvetica, sans-serif; }\\n\\nh1 {\\n  font-size: 120px;\\n  padding-left: 40px; }\\n\\n#bus-list {\\n  list-style: none;\\n  padding: 0;\\n  margin: 0;\\n  width: 300px; }\\n  #bus-list li {\\n    background: #ccc;\\n    padding: 10px 20px;\\n    border-radius: 3px;\\n    margin-bottom: 12px; }\\n\\n#disturbance-info {\\n  list-style: none;\\n  padding: 20px;\\n  border-radius: 3px;\\n  background: #f2f2f2; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/scss/layout.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -216,7 +216,7 @@ eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jqu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n$(document).ready(function () {\n    $.ajax({\n        type: \"GET\",\n        url: \"https://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=4124&timewindow=5\",\n        dataType: 'json',\n        success: function (data) {\n            var busDepartures = data.ResponseData.Buses;\n            $.each(busDepartures, function () {\n                $('#bus-list').append('<li>' + this['LineNumber'] + ' ' + this['Destination'] + ' ' + this['DisplayTime'] + '</li>');\n            });\n        },\n        error: function (e) {\n            console.log(\"Nope not working..\");\n        }\n    });\n});\n\n//# sourceURL=webpack:///./src/js/nextBus.js?");
+eval("var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nfunction updateBus() {\n    $('#bus-list').empty();\n\n    $.ajax({\n        type: \"GET\",\n        url: \"https://api.sl.se/api2/realtimedeparturesV4.json?key=32a8e47d03c2482e8c3a31074afd5f53&siteid=4124&timewindow=20\",\n        dataType: 'json',\n        success: function (data) {\n            var busDepartures = data.ResponseData.Buses;\n            $.each(busDepartures, function () {\n                $('#bus-list').append('<li>' + this['LineNumber'] + ' ' + this['Destination'] + ' ' + this['DisplayTime'] + '</li>');\n            });\n        },\n        error: function (e) {\n            console.log(\"Nope not working..\");\n        }\n    });\n}\n\nsetInterval(updateBus, 5000);\n\n//# sourceURL=webpack:///./src/js/nextBus.js?");
 
 /***/ }),
 
