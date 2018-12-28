@@ -8,23 +8,65 @@ h1 {
     padding-left: 40px;
 }
 
+h2 {
+    color: #fff;
+    margin: 0;
+}
+
+.bus-header {
+    display: flex;
+    align-items: center;
+    padding: 55px 0 20px 0;
+}
+
+.bus-icon img {
+    width: 40px;
+    margin-right: 10px;
+}
+
 #bus-list {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 300px;
+    color: #333;
+    min-height: 200px;
 
     li {
         background: rgba(255, 255, 255, 0.9);
         padding: 10px 20px;
         border-radius: 3px;
         margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 #disturbance-info {
+    width: 260px;
     list-style: none;
     padding: 20px;
     border-radius: 3px;
     background: rgba(255, 255, 255, 0.9);
+
+    h3 {
+        padding: 0;
+        margin: 0;
+        font-size: 17px;
+    }
+
+    .details {
+        //display: none;
+    }
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.info-icon img {
+    width: 40px;
+    margin-right: 10px;
 }

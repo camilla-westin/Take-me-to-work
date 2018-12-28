@@ -13,13 +13,9 @@ $(document).ready(function() {
         } else {
           $('body').addClass('warm'); 
         }
-        html = '<h1 class="icon-'+weather.code+'"></h1>';
+        html = '<div class="icon icon-'+weather.code+'"></div>';
         html += '<h2>'+weather.temp+'&deg;</h2>';
-        html += '<ul><li>'+weather.city+'</li>';
         html += '<li class="currently">'+weather.currently+'</li></ul>';
-        
-        //var timestamp = moment(weather.updated);
-        //html += '<p class="updated">Updated '+moment(timestamp).fromNow()+'</p>';
     
         $("#weather").html(html);
       },

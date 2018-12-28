@@ -10,7 +10,7 @@ function updateBus() {
         success:function(data) {
             var busDepartures = data.ResponseData.Buses;
             $.each(busDepartures, function() {
-                $('#bus-list').append('<li>' + this['LineNumber'] + ' ' + this['Destination'] + ' ' + this['DisplayTime'] + '</li>');
+                $('#bus-list').append('<li><span>' + this['LineNumber'] + ' ' + this['Destination'] + '</span><span> ' + this['DisplayTime'] + '</span></li>');
             });
         },
         error: function(e) {
