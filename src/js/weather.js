@@ -6,9 +6,9 @@ $(document).ready(function() {
       location: 'Nacka, Stockholm',
       unit: 'c',
       success: function(weather) {
-        if(weather.temp > 1) {
+        if(weather.temp < 1) {
           $('body').addClass('cold');
-        } else if (weather.temp > 15) {
+        } else if (weather.temp < 15) {
             $('body').addClass('medium');
         } else {
           $('body').addClass('warm'); 
