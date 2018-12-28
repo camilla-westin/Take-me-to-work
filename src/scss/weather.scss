@@ -10,6 +10,18 @@
     font-style: normal;
 }
 
+body {
+    &.cold {
+        background: #0091c2;
+    }
+    &.medium {
+        background: #11c1a1;
+    }
+    &.warm {
+        background: #55c609;
+    }
+}
+
 .loading {
   margin: 65px 0 0;
 }

@@ -6,18 +6,20 @@ $(document).ready(function() {
       location: 'Nacka, Stockholm',
       unit: 'c',
       success: function(weather) {
-        if(weather.temp > 15) {
-          $('body').animate({backgroundColor: '#F7AC57'}, 1500);
+        if(weather.temp > 1) {
+          $('body').addClass('cold');
+        } else if (weather.temp > 15) {
+            $('body').addClass('medium');
         } else {
-          $('body').animate({backgroundColor: '#0091c2'}, 1500); 
+          $('body').addClass('warm'); 
         }
         html = '<h1 class="icon-'+weather.code+'"></h1>';
         html += '<h2>'+weather.temp+'&deg;</h2>';
         html += '<ul><li>'+weather.city+'</li>';
         html += '<li class="currently">'+weather.currently+'</li></ul>';
         
-        var timestamp = moment(weather.updated);
-        html += '<p class="updated">Updated '+moment(timestamp).fromNow()+'</p>';
+        //var timestamp = moment(weather.updated);
+        //html += '<p class="updated">Updated '+moment(timestamp).fromNow()+'</p>';
     
         $("#weather").html(html);
       },
