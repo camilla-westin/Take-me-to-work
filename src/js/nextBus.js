@@ -19,4 +19,4 @@ function updateBus() {
     });
 }
 
-setInterval(updateBus, 5000);
+setInterval(updateBus, 10000);

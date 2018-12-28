@@ -13,17 +13,18 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "css-loader": "^2.0.2",
-    "file-loader": "^3.0.1",
+    "file-loader": "^3.0.1", 
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "resolve-url-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.2",
-    "webpack-cli": "^3.1.2",
-    "jquery": "^3.3.1"
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "http-server-ssl": "0.0.7"
+    "http-server-ssl": "0.0.7",
+    "moment": "^2.23.0",
+    "jquery": "^3.3.1"
   }
 }
