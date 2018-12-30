@@ -15,4 +15,10 @@ $(document).ready(function () {
         console.log("Nope not working..");
         }
     });
+
+    $('#disturbance-info').on('click', function (){
+        $(this).toggleClass('open');
+    });
 });
+
+
