@@ -8,21 +8,39 @@
 <body>
 <div class="site-container">
     <div class="pure-g">
-        <div class="pure-u-2-3 area1">
+        <div class="pure-u-1-2">
             <div id="weather"></div>
         </div>
-        <div class="pure-u-1-3 area2">
-            <div class="bus-header">
-                <div class="bus-icon"><img src="./src/img/bus.svg" alt="Bus icon" /></div>
-                <h2>Husaröstigen</h2>
+        <div class="pure-u-1-2 area1">
+            <div class="clock">
+                <div id="date"></div>
+                <ul>
+                    <li id="hours"></li>
+                    <li id="point">:</li>
+                    <li id="min"></li>
+                    <li id="point">:</li>
+                    <li id="sec"></li>
+                </ul>
+            </div>       
+        </div>
+        <div class="pure-u-1-3">
+            <div class="pure-box">
+                <div class="bus-header">
+                    <div class="bus-icon"><img src="./src/img/bus.svg" alt="Bus icon" /></div>
+                    <h2>Husaröstigen</h2>
+                </div>
+                <ul id="bus-list"></ul> 
+            </div>                
+        </div> 
+        <div class="pure-u-1-2">
+            <div class="pure-box">
+                <div class="info-header">
+                        <div class="info-icon"><img src="./src/img/info.svg" alt="Bus icon" /></div>
+                        <h2>SL Information</h2>
+                    </div>  
+                <ul id="disturbance-info"></ul>
             </div>
-            <ul id="bus-list"></ul>
-            <div class="info-header">
-                <div class="info-icon"><img src="./src/img/info.svg" alt="Bus icon" /></div>
-                <h2>SL Information</h2>
-            </div>
-            <ul id="disturbance-info"></ul>
-        </div>       
+        </div>      
     </div>
 </div>
 <script src="./dist/main.js"></script>    
