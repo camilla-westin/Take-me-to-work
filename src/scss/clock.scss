@@ -24,7 +24,7 @@
   #date {
     font-family: 'Catamaran', sans-serif;
     font-size:27px;
-    text-align:center;
+    text-align: left;
   }
   
   #point {
@@ -36,14 +36,14 @@
   
   @-webkit-keyframes mymove 
   {
-  0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
-  50% {opacity:0; text-shadow:none; }
-  100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+  0% {opacity:1.0;}
+  50% {opacity:0;}
+  100% {opacity:1.0;}    
   }
   
   @-moz-keyframes mymove 
   {
-  0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
-  50% {opacity:0; text-shadow:none; }
-  100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+  0% {opacity:1.0; }
+  50% {opacity:0; }
+  100% {opacity:1.0; }    
   }

@@ -16,7 +16,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#disturbance-info').on('click', function (){
+    $('#disturbance-info li').on('click', function (){
         $(this).toggleClass('open');
     });
 });
